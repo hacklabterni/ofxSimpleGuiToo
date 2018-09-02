@@ -65,7 +65,7 @@ ofxSimpleGuiControl &ofxSimpleGuiControl::setTextBGColor(bool clickable) {
 }
 
 ofxSimpleGuiControl &ofxSimpleGuiControl::setFullColor(bool forceActive) {
-	if(isMousePressed() || forceActive) ofSetHexColor(config->fullActiveColor);
+	if(isMouseDown() || forceActive) ofSetHexColor(config->fullActiveColor);
 	else if(isMouseOver()) ofSetHexColor(config->fullOverColor);
 	else ofSetHexColor(config->fullColor);
 	return *this;
